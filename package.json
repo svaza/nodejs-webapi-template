@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-webapp-template",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "tsc": "tsc",
+    "rimraf": "rimraf",
+    "build": "npm run rimraf ./dist && npm run tsc",
+    "run": "node ./dist/index.js",
+    "start": "npm run run"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.6",
+    "@types/node": "^13.13.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.8.3"
+  }
+}
