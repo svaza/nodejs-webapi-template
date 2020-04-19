@@ -1,8 +1,7 @@
 import * as express from 'express';
+import { DefaultMessageResponseModel } from './models';
 
-interface DefaultMessage {
-    message: string;
-}
+
 
 export class RouteConfig {
     static registerRoutes(): express.Router {
@@ -16,9 +15,9 @@ export class RouteConfig {
     }
 }
 
-export class HomeController {
+class HomeController {
 
-    static getDefaultMessage(userName: string): DefaultMessage {
+    static getDefaultMessage(userName: string): DefaultMessageResponseModel {
         return {
             message: `Welcome Home ${userName}`
         }

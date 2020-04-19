@@ -1,8 +1,7 @@
 import * as express from 'express';
+import { UserInfoResponseModel } from './models';
 
-interface UserInfo {
-    userName: string;
-}
+
 
 export class RouteConfig {
     static registerRoutes(): express.Router {
@@ -16,9 +15,9 @@ export class RouteConfig {
     }
 }
 
-export class UserController {
+class UserController {
 
-    static getUserInfo(userName: string): UserInfo {
+    static getUserInfo(userName: string): UserInfoResponseModel {
         return {
             userName: `${userName}`
         }
